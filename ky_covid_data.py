@@ -4,21 +4,29 @@ import plotly.graph_objs as go
 
 df = pd.read_csv('daily.csv')
 
+# create infection rate
+# total infected / total tested = _____%
+
+
+# csv data
 fig_inc = go.Figure(go.Line(x=df['date'], y=df['positive'], name='Infected', mode='lines+markers',
                             marker=dict(size=10, color='indianred')))
 
 fig_inc.add_trace(go.Line(x=df['date'], y=df['recovered'], name='Recovered', mode='lines+markers',
-                          marker=dict(size=10, color='lightseagreen')))
+                            marker=dict(size=10, color='lightseagreen')))
 
-fig_inc.add_trace(
-    go.Line(x=df['date'], y=df['death'], name='Deaths', mode='lines+markers', marker=dict(size=10, color='gray')))
+fig_inc.add_trace(go.Line(x=df['date'], y=df['death'], name='Deaths', mode='lines+markers',
+                            marker=dict(size=10, color='gray')))
 
 fig_inc.add_trace(go.Line(x=df['date'], y=df['positiveIncrease'], name='Daily', mode='lines+markers',
-                          marker=dict(size=10, color='Orange')))
+                            marker=dict(size=10, color='Orange')))
+
+#fig_inc.add_trace(go.Line(x=df['date'], y=df['totalTestResults'], name='Total Tested', mode='lines+markers',
+#                            marker=dict(size=10, color='Purple')))
 
 
 
-# here we define layout of the chart
+# layout
 fig_inc.update_layout(xaxis_showgrid=True, yaxis_showgrid=True, plot_bgcolor='whitesmoke',
                       title={
                           'text': 'Kentucky COVID-19 Cases',
