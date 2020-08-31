@@ -1,5 +1,5 @@
 import pandas as pd
-import plotly.offline as pyo
+import plotly.offline as py
 import plotly.graph_objs as go
 
 df = pd.read_csv('daily.csv')
