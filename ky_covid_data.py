@@ -19,7 +19,7 @@ fig_inc.add_trace(go.Line(x=df['date'], y=df['death'], name='Deaths', mode='line
                             marker=dict(size=10, color='gray')))
 
 fig_inc.add_trace(go.Line(x=df['date'], y=df['positiveIncrease'], name='Daily', mode='lines+markers',
-                            marker=dict(size=10, color='yellow')))
+                            marker=dict(size=10, color='orange')))
 
 #fig_inc.add_trace(go.Line(x=df['date'], y=df['totalTestResults'], name='Total Tested', mode='lines+markers',
 #                            marker=dict(size=10, color='Purple')))
