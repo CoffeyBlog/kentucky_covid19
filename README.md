@@ -1,5 +1,4 @@
-# kentucky_covid19
-Kentucky Covid chart
+# Kentucky Covid chart
 
 
 This project was used (by my family) to vizuale the state of illness during the COVID-19 pandemic. 
